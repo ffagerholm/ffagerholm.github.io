@@ -3,6 +3,13 @@ layout: default
 ---
 
 <article class="post">
+  {% include head.html %}
+  {% for js in page.jsarr %}
+    <script type="text/javascript">
+        {% include {{ js }} %}
+    </script>
+  {% endfor %}
+
   <h1>{{ page.title }}</h1>
 
   <div class="entry">
